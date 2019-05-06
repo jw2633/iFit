@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jw263.ifit1.Muscular">
+
+    <TextView
+        android:id="@+id/Muscular"
+        android:layout_width="403dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Muscular Strength"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activities: "
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Muscular" />
+
+    <TextView
+        android:id="@+id/Push_Up"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:text="\u2022 Pulldown"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Activities" />
+
+    <TextView
+        android:id="@+id/Pushdown"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:text="\u2022 Pushdown"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Push_Up" />
+
+    <TextView
+        android:id="@+id/Lunge"
+        android:layout_width="181dp"
+        android:layout_height="50dp"
+        android:text="\u2022 Shoulder Press"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pushdown" />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatingActionButton"-->
+        <!--android:layout_width="61dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_marginEnd="356dp"-->
+        <!--android:clickable="true"-->
+        <!--app:backgroundTint="@android:color/holo_blue_bright"-->
+        <!--app:fabSize="normal"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/imageButton"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/Lunge"-->
+        <!--app:srcCompat="@android:drawable/ic_input_add" />-->
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickStopwatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lunge"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    <TextView
+        android:id="@+id/Stopwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Stopwatch"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/Lunge" />
+
+    <Button
+        android:id="@+id/Notes"
+        android:layout_width="151dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickNotes"
+        android:text="Notes"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <Switch
+        android:id="@+id/Muscular1Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/Push_Up"
+        app:layout_constraintTop_toTopOf="@+id/Push_Up" />
+
+    <Switch
+        android:id="@+id/Muscular2Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/Pushdown"
+        app:layout_constraintTop_toTopOf="@+id/Pushdown" />
+
+    <Switch
+        android:id="@+id/Muscular3Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintStart_toEndOf="@+id/Lunge"
+        app:layout_constraintTop_toTopOf="@+id/Lunge" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarPulldown"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Push_Up" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarPushdown"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Pushdown" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarShoulderPress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Lunge" />
+
+</android.support.constraint.ConstraintLayout>

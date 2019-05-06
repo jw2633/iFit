@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jw263.ifit1.Flexibility">
+
+    <TextView
+        android:id="@+id/Flexibility"
+        android:layout_width="403dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="3dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Flexibility"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activities: "
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Flexibility" />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatingActionButton"-->
+        <!--android:layout_width="61dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_marginEnd="356dp"-->
+        <!--android:clickable="true"-->
+        <!--app:backgroundTint="@android:color/holo_blue_bright"-->
+        <!--app:fabSize="normal"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/imageButton"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/Lunge"-->
+        <!--app:srcCompat="@android:drawable/ic_input_add" />-->
+
+    <TextView
+        android:id="@+id/ArmAcrossChest"
+        android:layout_width="213dp"
+        android:layout_height="60dp"
+        android:text="\u2022 Arm Across Chest"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Activities" />
+
+    <TextView
+        android:id="@+id/Triceps"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:text="\u2022 Triceps"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArmAcrossChest" />
+
+    <TextView
+        android:id="@+id/Quadriceps"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:text="\u2022 Quadriceps"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Triceps" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickStopwatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quadriceps"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    <TextView
+        android:id="@+id/Stopwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Stopwatch"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/Quadriceps" />
+
+    <Button
+        android:id="@+id/Notes"
+        android:layout_width="151dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickNotes"
+        android:text="Notes"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <Button
+        android:id="@+id/videos"
+        android:layout_width="103dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickVideos"
+        android:text="Videos"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stopwatch" />
+
+    <Button
+        android:id="@+id/Audio"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onButtonClickAudio"
+        android:text="Audio"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videos" />
+
+    <Switch
+        android:id="@+id/Flexibility1Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/ProgressBarAAC"
+        app:layout_constraintStart_toEndOf="@+id/ArmAcrossChest"
+        app:layout_constraintTop_toBottomOf="@+id/Flexibility" />
+
+    <Switch
+        android:id="@+id/Flexibility2Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/ProgressBarTriceps"
+        app:layout_constraintStart_toEndOf="@+id/Triceps"
+        app:layout_constraintTop_toBottomOf="@+id/Flexibility1Switch" />
+
+    <Switch
+        android:id="@+id/Flexibility3Switch"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/ProgressBarQuadriceps"
+        app:layout_constraintStart_toEndOf="@+id/Quadriceps"
+        app:layout_constraintTop_toBottomOf="@+id/Flexibility2Switch" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarAAC"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Flexibility" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarTriceps"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProgressBarAAC" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarQuadriceps"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProgressBarTriceps" />
+
+</android.support.constraint.ConstraintLayout>
